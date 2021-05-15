@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>House Price Prediction</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+    <div class="container">
+        <h1 class="heading"> House Price Prediction </h1>
+        <br>
+        <p class="heading-p"> A machine learning web app, which is used to predict house price based on some features</p>        
+    </div>
+
+    <div class="prediction-form2">
+        <div class="results">
+            <h2 class="result-p">The final predicted house price (range): {{ lower_limit }} to {{ upper_limit }}</h2>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact">
+            <a target="_blank" href="https://github.com/Kaviarasan-R"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        </div>
+        <p class='footer-description'>❤️ Developed by Kaviarasan ❤️</p>
+    </div>
+
+</body>
+
+</html>

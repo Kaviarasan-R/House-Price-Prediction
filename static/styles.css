@@ -1,0 +1,153 @@
+html{
+	height: 100%;
+	margin: 0;
+}
+
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	margin: 0;
+	background-image: url("home.jpg");
+	height: 500px;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container{
+	color: #000000;
+    padding: 20px;
+	display: block;
+	text-align: center;
+}
+
+.heading{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin-bottom:0px;
+	font-style: bold;
+	color:white;
+}
+
+.heading-p{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	margin-top: 0px;
+	font-style: italic;
+	color:white;
+}
+
+.prediction-form{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 40px;
+}
+
+.prediction-form2, .result-p{
+    font-family: 'Open Sans', sans-serif;
+	position: relative;
+	display: flex;
+	font-weight: 100;
+	top:-40px;
+	margin-top:0px;
+	justify-content: space-evenly;
+	padding: 20px 40px;
+	color:white;
+}
+
+
+.align-center{
+	padding: 0 30px;
+}
+
+.form-input, .textfield{
+    background-color: #E9E9E9;
+	width: 370px;
+	height: 30px;
+	border-radius: 3px;
+	border: 0;
+	margin-top:0px;
+	text-align: center;
+	-webkit-box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+	box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+	margin-bottom: 15px;
+}
+
+.myButton {
+	background-color:#0c0c0c;
+	border-radius: 5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 30px;
+	display:flex;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration:none;
+	transition: 0.5s ease-out;
+}
+
+.myButton:hover{
+	background-color: #E9E9E9;
+	color: #000000;
+	box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+	
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.footer{
+	color:white;
+	padding: 12px;
+    text-align: center;
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+.contact-icon:hover{
+	color: #a6a19a;
+}
+
+.footer-description{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.results{
+  display: inline-block;
+  width: auto;
+  height: 429px;
+  line-height: 400px;
+  text-align: center;
+}
+
+.danger{
+    color: #ff0000;
+}
+
+.safe{
+    color: green;
+}
+
+.gif{
+	width: 25%;
+}
+
+.gif1{
+	width: 40%;
+}

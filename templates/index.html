@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>House Price Prediction</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="yearpicker.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    </head>
+<body>
+    <div class="container">
+        <h1 class="heading"> House Price Prediction </h1>
+        <br>
+        <p class="heading-p"> A machine learning web app, which is used to predict house price based on some features</p>        
+    </div>
+
+    <div class="prediction-form">
+        <form action="\predict" method="POST">
+
+            <select class="form-input align-center" name="neighborhood">
+                <option value="none">--- Select a Neighborhood ---</option>
+                <option value="Bloomington Heights">Bloomington Heights</option>
+                <option value="Bluestem">Bluestem</option>
+                <option value="Briardale">Briardale</option>
+                <option value="Brookside">Brookside</option>
+                <option value="Clear Creek">Clear Creek</option>
+                <option value="College Creek">College Creek</option>
+                <option value="Crawford">Crawford</option>
+                <option value="Edwards">Edwards</option>
+                <option value="Gilbert">Gilbert</option>
+                <option value="Iowa DOT and Rail Road">Iowa DOT and Rail Road</option>
+                <option value="Meadow Village">Meadow Village</option>
+                <option value="Mitchell">Mitchell</option>
+                <option value="North Ames">North Ames</option>
+                <option value="Northridge">Northridge</option>
+                <option value="Northpark Villa">Northpark Villa</option>
+                <option value="Northridge Heights">Northridge Heights</option>
+                <option value="Northwest Ames">Northwest Ames</option>
+                <option value="Old Town">Old Town</option>
+                <option value="South & West of Iowa State University">South & West of Iowa State University</option>
+                <option value="Sawyer">Sawyer</option>
+                <option value="Sawyer West">Sawyer West</option>
+                <option value="Somerset">Somerset</option>
+                <option value="Stone Brook">Stone Brook</option>
+                <option value="Timberland">Timberland</option>
+                <option value="Veenker">Veenker</option>
+            </select><br>
+
+            <select class="form-input align-center" name="overall_quality">
+                <option value="none">--- Select Overall Quality ---</option>
+                <option value="Very Excellent">Very Excellent</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Very Good">Very Good</option>
+                <option value="Good">Good</option>
+                <option value="Above Average">Above Average</option>
+                <option value="Average">Average</option>
+                <option value="Below Average">Below Average</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                <option value="Very Poor">Very Poor</option>
+            </select><br>
+
+            <input type="text" class="yearpicker textfield" name="year_sold" value="2021" placeholder="Year sold"><br>
+            
+            <input type="text" class="yearpicker textfield" name="remodel_year" value="2021" placeholder="Remodel date"><br>
+
+            <select class="form-input align-center" name="basement_exposure">
+                <option value="none">--- Select basement Exposure ---</option>
+                <option value="Good Exposure">Good Exposure</option>
+                <option value="Average Exposure">Average Exposure</option>
+                <option value="Mimimum Exposure">Mimimum Exposure</option>
+                <option value="No Exposure">No Exposure</option>
+                <option value="No Basement">No Basement</option>
+            </select><br>
+
+            <input type="text" class="textfield" name="living_area" value="" placeholder="living area square feet"><br>
+
+            <select class="form-input align-center" name="kitchen_quality">
+                <option value="none">--- Select Kitchen quality ---</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Typical/Average">Typical/Average</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+            </select><br>
+
+            <select class="form-input align-center" name="fireplace_quality">
+                <option value="none">--- Select Fireplace quality ---</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                <option value="No Fireplace">No Fireplace</option>
+            </select><br>
+
+            <select class="form-input align-center" name="garage_location">
+                <option value="none">--- Select Garage location ---</option>
+                <option value="More than one type of garage">More than one type of garage</option>
+                <option value="Attached to home">Attached to home</option>
+                <option value="Basement Garage">Basement Garage</option>
+                <option value="Built-In">Built-In</option>
+                <option value="Car Port">Car Port</option>
+                <option value="Detached from home">Detached from home</option>
+                <option value="No Garage">No Garage</option>
+            </select><br>
+
+            <select class="form-input align-center" name="garage_finish">
+                <option value="none">--- Select Garage Finish ---</option>
+                <option value="Finished">Finished</option>
+                <option value="Rough Finished">Rough Finished</option>
+                <option value="Unfinished">Unfinished</option>
+                <option value="No Garage">No Garage</option>
+            </select><br>
+
+            <input type="number" class="textfield" name="garage_cars" value="" placeholder="Size of garage in car capacity"><br>
+
+            <input type="submit" class="myButton" value="Predict Price">
+
+        </form>
+    </div>
+    <script src="yearpicker.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".yearpicker").yearpicker({
+                year:2021
+            });
+        });
+    </script>
+
+</body>
+
+</html>
